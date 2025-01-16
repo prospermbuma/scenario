@@ -1,0 +1,145 @@
+/* =================================================
+# General
+==================================================*/
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95dvh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: none;
+    padding: 0 40px;
+}
+
+.heading {
+    text-align: center;
+}
+
+/* =================================================
+# Form
+==================================================*/
+.form-wrapper {
+    width: 500px;
+    height: auto;
+    background: dodgerblue;
+    color: white;
+    padding: 20px 38px 50px 38px;
+    border-radius: 30px;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+
+.form-wrapper h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-wrapper form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-wrapper form input {
+    border: none;
+    outline: none;
+    padding: 16px 38px;
+    border-radius: 10px;
+}
+
+.form-wrapper .multi-fields {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .4em;
+    margin-bottom: 6px;
+}
+
+.form-wrapper #submit {
+    border: none;
+    outline: none;
+    padding: 16px 38px;
+    border-radius: 50px;
+    background: #f7ba03;
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    bottom: -15px;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+}
+
+.form-wrapper #submit:hover {
+    cursor: pointer;
+    background: #f7ae03;
+}
+
+.form-wrapper #submit {
+    border: none;
+    outline: none;
+    padding: 16px 38px;
+    border-radius: 50px;
+    background: #f7ba03;
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    bottom: -15px;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+}
+
+.message {
+    font-weight: bold;
+    padding: 20px 24px;
+    height: auto;
+    border-radius: 20px;
+    text-align: center;
+    animation: pop-In .4s ease-in-out alternate;
+    display: none;
+}
+
+.error {
+    background: #de4949;
+    color: #fff;
+    display: block;
+}
+
+.success {
+    background: #58de49;
+    color: #fff;
+    display: block;
+}
+
+@keyframes pop-In {
+    from {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+}
+
+@keyframes pop-Out {
+    from {
+        transform: scale(1.0);
+    }
+
+    to {
+        transform: scale(0.8);
+    }
+}
