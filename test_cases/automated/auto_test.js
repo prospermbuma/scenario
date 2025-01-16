@@ -8,7 +8,7 @@ describe("User Registration Form", () => {
         email_input.value = "abc.com";
         const submitBtn = document.querySelector("#submit");
         submitBtn.click();
-        const errorMsg = document.querySelector("#email-error");
+        const errorMsg = document.querySelector(".message");
         expect(errorMsg.textContent).toBe("Invalid email address.");
     });
 });
