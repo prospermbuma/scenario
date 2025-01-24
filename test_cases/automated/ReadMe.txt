@@ -5,15 +5,15 @@ The tearDown() method cleans up by dropping the users table and closing the data
 
 # Unit Tests:
 
-testTableCreation: Verifies that the users table is created successfully.
+01 - testTableCreation: Verifies that the users table is created successfully.
 
-testUserRegistration: Tests that a user is inserted into the database successfully.
+02 - testUserRegistration: Tests that a user is inserted into the database successfully.
 
-testDuplicateEmailRegistration: Checks that duplicate email registration is handled (throws an exception in this case).
+03 - testDuplicateEmailRegistration: Checks that duplicate email registration is handled (throws an exception in this case).
 
-testEmptyFields: Validates that empty fields are detected.
+04- testEmptyFields: Validates that empty fields are detected.
 
-testInvalidEmail: Ensures that invalid email addresses are identified.
+05 - testInvalidEmail: Ensures that invalid email addresses are identified.
 
 # PHPUnit Integration:
 
