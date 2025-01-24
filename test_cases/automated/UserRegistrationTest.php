@@ -9,7 +9,7 @@ class UserRegistrationTest extends TestCase
     protected function setUp(): void
     {
         // Mock database connection
-        $this->conn = new mysqli("localhost", "root", "", "test_database");
+        $this->conn = new mysqli("localhost", "root", "", "test_scenario");
 
         // Ensure the database connection is successful
         if ($this->conn->connect_error) {
@@ -30,12 +30,12 @@ class UserRegistrationTest extends TestCase
         $this->conn->query($sql);
     }
 
-    protected function tearDown(): void
-    {
-        // Drop the users table after the test
-        $this->conn->query("DROP TABLE IF EXISTS users");
-        $this->conn->close();
-    }
+    // protected function tearDown(): void
+    // {
+    //     // Drop the users table after the test
+    //     $this->conn->query("DROP TABLE IF EXISTS users");
+    //     $this->conn->close();
+    // }
 
     public function testTableCreation(): void
     {
@@ -45,6 +45,7 @@ class UserRegistrationTest extends TestCase
 
     public function testUserRegistration(): void
     {
+
         $first_name = "John";
         $last_name = "Doe";
         $email = "john.doe@example.com";

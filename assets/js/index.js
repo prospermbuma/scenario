@@ -18,6 +18,7 @@ register_form.onsubmit = (e) => {
 
     // Open connection
     xhr.open('POST', 'backend/register.php', true);
+    // xhr.open('POST', '/test_cases/automated/UserRegistrationTest.php', true);
 
     xhr.onreadystatechange = function () {
         if (this.status === 200 && this.readyState === 4) {
