@@ -8,7 +8,7 @@ curl -sS https://getcomposer.org/installer | php
 
 composer require --dev phpunit/phpunit
 
-# Verify Installation:
+# Verify Installation: Check the PHPUnit version:
 
 ./vendor/bin/phpunit --version
 
