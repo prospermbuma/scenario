@@ -31,7 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pswd_1 = filter_input(INPUT_POST, 'pswd1', FILTER_SANITIZE_SPECIAL_CHARS);
     $pswd_2 = filter_input(INPUT_POST, 'pswd2', FILTER_SANITIZE_SPECIAL_CHARS);
 
+    // Check if fields are not empty
     if (!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone) && !empty($pswd_1) && !empty($pswd_2)) {
+        // Check password mismatch
         if ($pswd_2 != $pswd_1) {
             echo "Password mismatch";
         } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
