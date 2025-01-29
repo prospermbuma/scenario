@@ -58,7 +58,7 @@ class UserRegistration
     public function validateEmail($email)
     {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            throw new \Exception("Invalid email address.");
+            throw new \Exception("Invalid email format.");
         }
     }
 }

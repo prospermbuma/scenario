@@ -61,7 +61,7 @@ class UserRegistrationTest extends TestCase
     public function testInvalidEmail()
     {
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage("Invalid email address.");
+        $this->expectExceptionMessage("Invalid email format.");
         $this->userRegistration->registerUser('test', 'three', 'invalid-email', '07454546723', 'password123', 'password123');
     }
 

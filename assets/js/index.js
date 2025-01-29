@@ -17,13 +17,12 @@ register_form.onsubmit = (e) => {
     const xhr = new XMLHttpRequest();
 
     // Open connection
-    xhr.open('POST', 'src/register.php', true);
-    // xhr.open('POST', '/test_cases/automated/UserRegistrationTest.php', true);
+    xhr.open('POST', 'src/registration.php', true);
 
     xhr.onreadystatechange = function () {
         if (this.status === 200 && this.readyState === 4) {
             let response = xhr.response;
-            if (response.indexOf("Sorry, user already taken") != -1 || response.indexOf("Fields cannot be blank") != -1 || response.indexOf("Password mismatch") != -1 || response.indexOf("Not saved ") != -1 || response.indexOf("Invalid email address") != -1 || response.indexOf("Fatal error") != -1 || response.indexOf("Server error") != -1) {
+            if (response.indexOf("Sorry, user already taken.") != -1 || response.indexOf("Fields cannot be blank.") != -1 || response.indexOf("Password mismatch.") != -1 || response.indexOf("Failed to register user.") != -1 || response.indexOf("Invalid email format.") != -1 || response.indexOf("Fatal error") != -1 || response.indexOf("Server error") != -1) {
                 message.classList.remove('success');
                 message.classList.add('error');
                 message.innerText = response;
