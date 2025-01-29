@@ -17,7 +17,7 @@ register_form.onsubmit = (e) => {
     const xhr = new XMLHttpRequest();
 
     // Open connection
-    xhr.open('POST', 'backend/register.php', true);
+    xhr.open('POST', 'src/register.php', true);
     // xhr.open('POST', '/test_cases/automated/UserRegistrationTest.php', true);
 
     xhr.onreadystatechange = function () {
